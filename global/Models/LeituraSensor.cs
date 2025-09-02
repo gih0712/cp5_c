@@ -12,7 +12,8 @@ namespace global.Models
         public int? Id { get; set; }  // nullable, gerado pelo banco
 
         [Column("ID_SENSOR")]
-        public int SensorId { get; set; }  // obrigatório, FK
+        [Required] // FK obrigatória
+        public int SensorId { get; set; }
 
         [ForeignKey("SensorId")]
         public virtual Sensor? Sensor { get; set; }
