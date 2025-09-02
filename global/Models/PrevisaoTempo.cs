@@ -9,9 +9,10 @@ namespace global.Models
     {
         [Key]
         [Column("ID_PREVISAO_TEMPO")]
-        public int? Id { get; set; }  // nullable, gerado pelo banco
+        public int? Id { get; set; }
 
         [Column("LOCALIZACAO")]
+        [Required]
         public string Localizacao { get; set; } = string.Empty;
 
         [Column("DATA_HORA")]
