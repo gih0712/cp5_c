@@ -22,5 +22,4 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 
-// versão assíncrona recomendada
-await app.RunAsync();
+await app.RunAsync(); // versão assíncrona
