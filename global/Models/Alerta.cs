@@ -9,7 +9,7 @@ namespace global.Models
     {
         [Key]
         [Column("ID_ALERTA")]
-        public int? Id { get; set; }   // agora nullable, gerado pelo banco
+        public int? Id { get; set; }  // nullable identity
 
         [Column("ID_USUARIO")]
         public int? UsuarioId { get; set; }
@@ -27,9 +27,11 @@ namespace global.Models
         public virtual PrevisaoTempo? PrevisaoTempo { get; set; }
 
         [Column("TIPO_ALERTA")]
+        [Required]
         public string Tipo { get; set; } = string.Empty;
 
         [Column("MENSAGEM")]
+        [Required]
         public string Descricao { get; set; } = string.Empty;
 
         [Column("DATA_HORA")]
