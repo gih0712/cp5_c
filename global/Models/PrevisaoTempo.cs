@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,7 +9,7 @@ namespace global.Models
     {
         [Key]
         [Column("ID_PREVISAO_TEMPO")]
-        public int Id { get; set; }
+        public int? Id { get; set; }  // nullable, gerado pelo banco
 
         [Column("LOCALIZACAO")]
         public string Localizacao { get; set; } = string.Empty;
