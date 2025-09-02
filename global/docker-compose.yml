@@ -1,11 +1,11 @@
-﻿services:
+services:
   oracledb:
     image: gvenzl/oracle-xe:21.3.0-slim
     container_name: oracledb
     environment:
-      - ORACLE_PASSWORD=070705
-      - APP_USER=rm555341
-      - APP_USER_PASSWORD=070705
+      - ORACLE_PASSWORD=<suasSenha>
+      - APP_USER=<seuId>
+      - APP_USER_PASSWORD=<suasSenha>
     ports:
       - "1521:1521"
     volumes:
@@ -16,7 +16,7 @@
     container_name: dotnetapi
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=User Id=rm555341;Password=070705;Data Source=oracledb:1521/XEPDB1
+      - ConnectionStrings__DefaultConnection=User Id=<seuId>;Password=<suasSenha>;Data Source=oracledb:1521/XEPDB1
     ports:
       - "8080:8080"
     depends_on:
