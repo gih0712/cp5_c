@@ -8,12 +8,14 @@ namespace global.Models
     {
         [Key]
         [Column("ID_USUARIO")]
-        public int? IdUsuario { get; set; }  // nullable, gerado pelo banco
+        public int? IdUsuario { get; set; }
 
         [Column("NOME")]
+        [Required]
         public string Nome { get; set; } = string.Empty;
 
         [Column("EMAIL")]
+        [Required]
         public string Email { get; set; } = string.Empty;
 
         [Column("LOCALIZACAO_USUARIO")]
