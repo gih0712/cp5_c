@@ -9,10 +9,10 @@ namespace global.Models
     {
         [Key]
         [Column("ID_LEITURA_SENSOR")]
-        public int? Id { get; set; }  // nullable, gerado pelo banco
+        public int? Id { get; set; }
 
         [Column("ID_SENSOR")]
-        [Required] // FK obrigatória
+        [Required]
         public int SensorId { get; set; }
 
         [ForeignKey("SensorId")]
