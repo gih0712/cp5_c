@@ -9,9 +9,10 @@ namespace global.Models
     {
         [Key]
         [Column("ID_SENSOR")]
-        public int? IdSensor { get; set; }  // nullable, gerado pelo banco
+        public int? IdSensor { get; set; }
 
         [Column("NOME")]
+        [Required]
         public string Nome { get; set; } = string.Empty;
 
         [Column("LOCALIZACAO_SENSOR")]
